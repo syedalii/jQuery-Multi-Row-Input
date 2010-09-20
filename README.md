@@ -1,9 +1,6 @@
 jQuery Plugin: Multi Row Input
 ==============================
-
 By Tom Holder - http://simpleweb.co.uk
---------------------------------------
-
 
 Overview
 --------
