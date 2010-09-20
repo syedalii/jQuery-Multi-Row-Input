@@ -1,0 +1,120 @@
+<html>
+<head>
+	
+	<link rel="stylesheet" href="css/tipTip.css" type="text/css" />
+	<link rel="stylesheet" href="css/multirow.css" type="text/css" />
+	
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.multirow.js"></script>
+	<script type="text/javascript" src="js/jquery.labelify.js"></script>
+	<script type="text/javascript" src="js/jquery.tipTip.js"></script>
+	
+    <script type="text/javascript">
+    $(document).ready(function() {
+	
+		$('input,textarea').labelify({ text: "label", labelledClass: "labelled" });
+		
+        $('div.multiRowInput').multiRowInput({tipTip: true, labelify: true});
+    });
+    </script>
+</head>
+
+<body>
+    <h1>Jquery Multi Row Input</h1>
+
+
+	<h2>Example without existing data</h2>
+
+	<div class="multiRowInput">
+
+		<!--This is the template for new rows, load existing data in just by outputting multiple input rows as you normally would-->
+		<div class="inputRow">
+
+		    <div class="sideBySide">
+		        <label for="Type">Type</label>
+		        <select id="Type" name="Type[]">
+					<option selected="selected">Address Work</option>
+					<option>Address Home</option>
+				</select>
+		    </div>
+
+		    <div class="sideBySide">
+				<div>
+					<label for="Address" class="labelify">Address</label>
+					<textarea rows="3" id="Address" name="Address[]"></textarea>
+				</div>
+				<div class="sideBySide">
+					<label for="Postcode" class="labelify">Postcode</label>
+					<input type="text" id="Postcode" name="Postcode[]">
+				</div>
+				<div>
+					<label id="Country" for="Country">Country</label>
+					<select name="Country[]" id="Country">
+						<option value=" ">Select a country:</option>
+						<option selected="true" value="GB">United Kingdom</option>
+						<option value="US">United States</option>
+					</select>
+				</div>
+
+		    </div>
+
+		    <div class="sideBySide">
+		        <a class="add" href="#addressFields" title="Add new row">
+		            <img src="images/add.png">
+		        </a>
+		    </div>
+
+		    <div class="sideBySide">
+		        <a class="delete" href="#addressFields" title="Remove row" style="display: none;">
+		            <img src="images/delete.png">
+		        </a>
+		    </div>
+		
+		</div>
+
+	</div>
+	
+	<h2>Example with existing data</h2>
+	
+	<div class="multiRowInput">
+	
+		<div class="inputRow">
+
+		    <div class="sideBySide">
+		        <label for="TypeTel">Type</label>
+		        <select id="TypeTel" name="TypeTel[]">
+					<option selected="selected">Phone Work</option>
+					<option>Phone Home</option>
+					<option>Mobile Work</option>
+					<option>Mobile Home</option>
+				</select>
+		    </div>
+
+		    <div class="sideBySide">
+				<label for="TelNumber" class="labelify">Number</label>
+				<input type="text" id="TelNumber" name="TelNumber[]" value="555 347890">
+			</div>
+
+		    <div class="sideBySide">
+		        <a class="add" href="#addressFields" title="Add new row">
+		            <img src="images/add.png">
+		        </a>
+		    </div>
+
+		    <div class="sideBySide">
+		        <a class="delete" href="#addressFields" title="Remove row" style="display: none;">
+		            <img src="images/delete.png">
+		        </a>
+		    </div>
+		
+		</div>
+
+	
+					
+	</div>	
+							
+    
+
+</body>
+</html>
