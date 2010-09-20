@@ -9,6 +9,7 @@ This is a jQuery plugin to provide multi row data input for things such as suppo
 
 Works with TipTip and Labelify plugins to improve the experience further:
 
+http://code.drewwilson.com/entry/tiptip-jquery-plugin
 http://github.com/glennfu/jquery.labelify
 
 This plugin was built for our fabulous ContactZilla product! (http://www.contactzilla.com/)
