@@ -51,6 +51,7 @@
 			}
 			
 			$(opts.inputRow + ' a.add', multiRowContainer).filter(':not(:last)').hide();
+			$(opts.inputRow + ' a.delete', multiRowContainer).filter(':not(:last)').hide();
 			
 			//This is due to tipTip not being able to apply itself to dynamically added elements.
 			if(opts.tipTip) {
