@@ -50,6 +50,8 @@
 				$(opts.inputRow + ' a.delete', multiRowContainer).filter(':first').hide();
 			}
 			
+			$(opts.inputRow + ' a.add', multiRowContainer).filter(':not(:last)').hide();
+			
 			//This is due to tipTip not being able to apply itself to dynamically added elements.
 			if(opts.tipTip) {
 				var addTitle = $(opts.inputRow + ' a.add', multiRowContainer).filter(':first').attr('title');
@@ -103,6 +105,9 @@
 							
 						});
 						
+						if(!opts.labelify) {
+							$('input', newRow).val('');
+						}
 						
 						// Want this in, but it's applying to all
 						//$('select option:selected', newRow).removeAttr('selected');
